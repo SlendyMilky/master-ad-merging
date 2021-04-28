@@ -18,10 +18,10 @@ reset='\033[0m'
 
 ## VAR à modif
 DIR='/tmp/bash-merge/'
-firebog=./lib/firebog.sh
-gitburst=./lib/gitburst.sh
-lonely=./lib/lonely.sh
-oisd=./lib/oisd.sh
+firebog=/root/master-ad-merging/Bash/lib/firebog.sh
+gitburst=/root/master-ad-merging/Bash/lib/gitburst.sh
+lonely=/root/master-ad-merging/Bash/lib/lonely.sh
+oisd=/root/master-ad-merging/Bash/lib/oisd.sh
 
 # Nettoyage
 rm -rf $DIR/*
