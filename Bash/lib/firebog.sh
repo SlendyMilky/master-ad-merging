@@ -51,6 +51,7 @@ curl https://v.firebog.net/hosts/Openphish.txt >> $DIR/temp
 curl https://v.firebog.net/hosts/SBRisk.txt >> $DIR/temp
 curl https://v.firebog.net/hosts/Shalla-mal.txt >> $DIR/temp
 curl https://v.firebog.net/hosts/Prigent-Malware.txt >> $DIR/temp
+curl https://v.firebog.net/hosts/static/w3kbl.txt >> $DIR/temp
 
 # Mise en ordre alphabétique et unique
 uniq $DIR/temp | sort > $DIR/$adlist
