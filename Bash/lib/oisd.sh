@@ -33,4 +33,7 @@ else
   mkdir -p $DIR
 fi
 
-curl https://dbl.oisd.nl > $DIR/$adlist # Don't need formating
+curl -s https://dbl.oisd.nl > $DIR/$adlist # Don't need formating
+
+# Fin
+echo -e "${green}$adlist : OK${reset}"

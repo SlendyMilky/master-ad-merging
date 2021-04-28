@@ -34,20 +34,20 @@ else
 fi
 
 # Fusion all lists
-curl https://adaway.org/hosts.txt | grep -o '^[^#]*' | awk '{print $2}' > $DIR/temp
-curl https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt >> $DIR/temp
-curl https://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt | grep -o '^[^#]*' | awk '{print $2}'  >> $DIR/temp
-curl https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt | awk '{print $1}' | grep -o '^[^#]*' >> $DIR/temp
-curl https://hostfiles.frogeye.fr/firstparty-trackers-hosts.txt | grep -o '^[^#]*' | awk '{print $2}' >> $DIR/temp
-curl https://hostfiles.frogeye.fr/multiparty-trackers-hosts.txt | grep -o '^[^#]*' | awk '{print $2}' >> $DIR/temp
-curl https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt >> $DIR/temp
-curl https://someonewhocares.org/hosts/zero/hosts | grep -o '^[^#]*' | awk '{print $2}' >> $DIR/temp
-curl https://urlhaus.abuse.ch/downloads/hostfile/ | grep -o '^[^#]*' | awk '{print $2}' >> $DIR/temp
-curl https://winhelp2002.mvps.org/hosts.txt | grep -o '^[^#]*' | awk '{print $2}' >> $DIR/temp
-curl https://assets.windscribe.com/custom_blocklists/clickbait.txt >> $DIR/temp
-curl https://hosts.ubuntu101.co.za/domains.list >> $DIR/temp
-curl https://www.thedumbterminal.co.uk/files/services/squidblockedsites/blocked.txt >> $DIR/temp
-curl https://www.threatcrowd.org/feeds/domains.txt >> $DIR/temp
+curl -s https://adaway.org/hosts.txt | grep -o '^[^#]*' | awk '{print $2}' > $DIR/temp
+curl -s https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt >> $DIR/temp
+curl -s https://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt | grep -o '^[^#]*' | awk '{print $2}'  >> $DIR/temp
+curl -s https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt | awk '{print $1}' | grep -o '^[^#]*' >> $DIR/temp
+curl -s https://hostfiles.frogeye.fr/firstparty-trackers-hosts.txt | grep -o '^[^#]*' | awk '{print $2}' >> $DIR/temp
+curl -s https://hostfiles.frogeye.fr/multiparty-trackers-hosts.txt | grep -o '^[^#]*' | awk '{print $2}' >> $DIR/temp
+curl -s https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt >> $DIR/temp
+curl -s https://someonewhocares.org/hosts/zero/hosts | grep -o '^[^#]*' | awk '{print $2}' >> $DIR/temp
+curl -s https://urlhaus.abuse.ch/downloads/hostfile/ | grep -o '^[^#]*' | awk '{print $2}' >> $DIR/temp
+curl -s https://winhelp2002.mvps.org/hosts.txt | grep -o '^[^#]*' | awk '{print $2}' >> $DIR/temp
+curl -s https://assets.windscribe.com/custom_blocklists/clickbait.txt >> $DIR/temp
+curl -s https://hosts.ubuntu101.co.za/domains.list >> $DIR/temp
+curl -s https://www.thedumbterminal.co.uk/files/services/squidblockedsites/blocked.txt >> $DIR/temp
+curl -s https://www.threatcrowd.org/feeds/domains.txt >> $DIR/temp
 
 # Mise en ordre alphabétique et unique sans commentaire
 uniq $DIR/temp | grep -o '^[^#]*' | sort > $DIR/$adlist

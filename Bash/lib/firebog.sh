@@ -34,24 +34,24 @@ else
 fi
 
 # Fusion all lists
-curl https://v.firebog.net/hosts/AdAway.txt > $DIR/temp
-curl https://v.firebog.net/hosts/Disconnect-ads.txt >> $DIR/temp
-curl https://v.firebog.net/hosts/Easylist.txt >> $DIR/temp
-curl https://v.firebog.net/hosts/Easylist-Dutch.txt >> $DIR/temp
-curl https://v.firebog.net/hosts/SBUnchecky.txt >> $DIR/temp
-curl https://v.firebog.net/hosts/AdguardDNS.txt >> $DIR/temp
-curl https://v.firebog.net/hosts/Prigent-Ads.txt >> $DIR/temp
-curl https://v.firebog.net/hosts/Airelle-trc.txt >> $DIR/temp
-curl https://v.firebog.net/hosts/Disconnect-trc.txt >> $DIR/temp
-curl https://v.firebog.net/hosts/Easyprivacy.txt >> $DIR/temp
-curl https://v.firebog.net/hosts/SB2o7Net.txt >> $DIR/temp
-curl https://v.firebog.net/hosts/APT1Rep.txt >> $DIR/temp
-curl https://v.firebog.net/hosts/Airelle-hrsk.txt >> $DIR/temp
-curl https://v.firebog.net/hosts/Openphish.txt >> $DIR/temp
-curl https://v.firebog.net/hosts/SBRisk.txt >> $DIR/temp
-curl https://v.firebog.net/hosts/Shalla-mal.txt >> $DIR/temp
-curl https://v.firebog.net/hosts/Prigent-Malware.txt >> $DIR/temp
-curl https://v.firebog.net/hosts/static/w3kbl.txt >> $DIR/temp
+curl -s https://v.firebog.net/hosts/AdAway.txt > $DIR/temp
+curl -s https://v.firebog.net/hosts/Disconnect-ads.txt >> $DIR/temp
+curl -s https://v.firebog.net/hosts/Easylist.txt >> $DIR/temp
+curl -s https://v.firebog.net/hosts/Easylist-Dutch.txt >> $DIR/temp
+curl -s https://v.firebog.net/hosts/SBUnchecky.txt >> $DIR/temp
+curl -s https://v.firebog.net/hosts/AdguardDNS.txt >> $DIR/temp
+curl -s https://v.firebog.net/hosts/Prigent-Ads.txt >> $DIR/temp
+curl -s https://v.firebog.net/hosts/Airelle-trc.txt >> $DIR/temp
+curl -s https://v.firebog.net/hosts/Disconnect-trc.txt >> $DIR/temp
+curl -s https://v.firebog.net/hosts/Easyprivacy.txt >> $DIR/temp
+curl -s https://v.firebog.net/hosts/SB2o7Net.txt >> $DIR/temp
+curl -s https://v.firebog.net/hosts/APT1Rep.txt >> $DIR/temp
+curl -s https://v.firebog.net/hosts/Airelle-hrsk.txt >> $DIR/temp
+curl -s https://v.firebog.net/hosts/Openphish.txt >> $DIR/temp
+curl -s https://v.firebog.net/hosts/SBRisk.txt >> $DIR/temp
+curl -s https://v.firebog.net/hosts/Shalla-mal.txt >> $DIR/temp
+curl -s https://v.firebog.net/hosts/Prigent-Malware.txt >> $DIR/temp
+curl -s https://v.firebog.net/hosts/static/w3kbl.txt >> $DIR/temp
 
 # Mise en ordre alphabétique et unique
 uniq $DIR/temp | sort > $DIR/$adlist
