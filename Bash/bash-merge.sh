@@ -19,6 +19,9 @@ reset='\033[0m'
 ## VAR à modif
 DIR='/tmp/bash-merge/'
 firebog=./lib/firebog.sh
+gitburst=./lib/gitburst.sh
+lonely=./lib/lonely.sh
+oisd=./lib/oisd.sh
 
 # Nettoyage
 rm -rf $DIR/*
@@ -36,5 +39,11 @@ else
   mkdir -p $DIR
 fi
 
+# Run des scripts de téléchargement
 $firebog
-ll /tmp/bash-merge/
+$gitburst
+$lonely
+$oisd
+
+# Merge de toutes les adlists
+

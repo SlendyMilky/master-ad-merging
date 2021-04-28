@@ -87,6 +87,7 @@ curl https://raw.githubusercontent.com/soteria-nou/domain-list/master/fake.txt >
 uniq $DIR/temp | grep -o '^[^#]*' | sort > $DIR/$adlist
 
 # Fin
+rm -rf $DIR/temp
 echo -e "${green}$adlist : OK${reset}"
 
 ## Page 20 de https://filterlists.com/lists/

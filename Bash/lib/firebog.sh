@@ -57,4 +57,5 @@ curl https://v.firebog.net/hosts/static/w3kbl.txt >> $DIR/temp
 uniq $DIR/temp | sort > $DIR/$adlist
 
 # Fin
+rm -rf $DIR/temp
 echo -e "${green}$adlist : OK${reset}"

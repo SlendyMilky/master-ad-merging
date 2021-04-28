@@ -53,4 +53,5 @@ curl https://www.threatcrowd.org/feeds/domains.txt >> $DIR/temp
 uniq $DIR/temp | grep -o '^[^#]*' | sort > $DIR/$adlist
 
 # Fin
+rm -rf $DIR/temp
 echo -e "${green}$adlist : OK${reset}"
