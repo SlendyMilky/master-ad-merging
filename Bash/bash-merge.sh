@@ -46,4 +46,10 @@ $lonely
 $oisd
 
 # Merge de toutes les adlists
+find /tmp/bash-merge/ -name "*.adlist" -exec cat {} \; | uniq > $DIR/temp
 
+# Nettoyage de toutes choses pas bien
+cat $DIR/temp | grep -o '^[^#]*' | grep -o '^[^!]*' > $DIR/temp1
+
+# Sort
+cat $DIR/temp1 | sort > /root/slyinc.adlist
