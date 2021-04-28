@@ -21,7 +21,7 @@ adlist='oisd.adlist'
 rm -rf $DIR/*
 
 # Création Dossier DBL
-echo "Vérification existance dossier {$DIR}"
+echo "Vérification existance dossier ${DIR}"
 if [ -d "$DIR" ]; then
   # Si $dir existe faire :
   echo -e "${green}Le dossier exsite !${reset}"
