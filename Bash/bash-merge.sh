@@ -2,8 +2,8 @@
 
 # ==========================================
 # Author        : Slendy_Milky
-# Version       : V1.1
-# Creation Date : 28.04.2021
+# Version       : V1.2
+# Creation Date : 03.05.2021
 # Script        : This script has been created to merge all adlist that i have found and use for my pihole. 
 #                 As i want an unified list for my Pi-Hole and my AdGuard Home i prefer something that i'm sure that will be the same.
 # ==========================================
@@ -18,10 +18,24 @@ reset='\033[0m'
 
 ## VAR à modif
 DIR='/tmp/bash-merge/'
-firebog=/root/master-ad-merging/Bash/lib/firebog.sh
-gitburst=/root/master-ad-merging/Bash/lib/gitburst.sh
-lonely=/root/master-ad-merging/Bash/lib/lonely.sh
-oisd=/root/master-ad-merging/Bash/lib/oisd.sh
+MAIN='./main-slyinc.txt'
+MAINSH='./main.sh'
+firebog='./lib/firebog.sh'
+gitburst='./lib/gitburst.sh'
+lonely='./lib/lonely.sh'
+oisd='./lib/oisd.sh'
+
+# Création Fichier initial
+if [ -d "$MAIN" ]; then
+  # Si $main existe faire :
+  echo -e "${green}Le Fichier existe.${reset}"
+  echo -e "${yellow}Continuation du script.${reset}"
+else
+  # Si $main n'existe pas faire :
+  echo -e "${red}Le fichier n'existe pas !${reset}"
+  echo -e "${yellow}Création du fichier.${reset}"
+  $MAINSH
+fi
 
 # Nettoyage
 rm -rf $DIR/*
@@ -53,3 +67,5 @@ cat $DIR/temp | grep -o '^[^#]*' | grep -o '^[^!]*' > $DIR/temp1
 
 # Sort
 cat $DIR/temp1 | sort > /root/slyinc.adlist.new
+
+# Ajout new dans main
