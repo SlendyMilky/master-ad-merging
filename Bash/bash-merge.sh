@@ -15,16 +15,18 @@ green='\033[0;32m'
 red='\033[0;31m'
 yellow='\033[0;33m'
 reset='\033[0m'
+full_path=$(realpath $0)
+dir_path=$(dirname $full_path)
 
 
 ## VAR à modif
 DIR='/tmp/bash-merge/'
-MAIN=`../main-slyinc.txt`
-MAINSH=`../main.sh`
-firebog=`$../Bash/lib/firebog.sh`
-gitburst=`../Bash/lib/gitburst.sh`
-lonely=`../Bash/lib/lonely.sh`
-oisd=`../Bash/lib/oisd.sh`
+MAIN=`$dir_path/main-slyinc.txt`
+MAINSH=`$dir_path/main.sh`
+firebog=`$dir_path/Bash/lib/firebog.sh`
+gitburst=`$dir_path/Bash/lib/gitburst.sh`
+lonely=`$dir_path/Bash/lib/lonely.sh`
+oisd=`$dir_path/Bash/lib/oisd.sh`
 
 # Création Fichier initial
 if [ -d "$MAIN" ]; then
