@@ -52,4 +52,4 @@ find /tmp/bash-merge/ -name "*.adlist" -exec cat {} \; | uniq > $DIR/temp
 cat $DIR/temp | grep -o '^[^#]*' | grep -o '^[^!]*' > $DIR/temp1
 
 # Sort
-cat $DIR/temp1 | sort > /root/slyinc.adlist
+cat $DIR/temp1 | sort > /root/slyinc.adlist.new
