@@ -15,16 +15,16 @@ green='\033[0;32m'
 red='\033[0;31m'
 yellow='\033[0;33m'
 reset='\033[0m'
-path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+path=`pwd`
 
 ## VAR à modif
 DIR='/tmp/bash-merge/'
-MAIN='/main-slyinc.txt'
-MAINSH='/main.sh'
-firebog='/lib/firebog.sh'
-gitburst='/lib/gitburst.sh'
-lonely='/lib/lonely.sh'
-oisd='/lib/oisd.sh'
+MAIN=`${path}/main-slyinc.txt`
+MAINSH=`${path}/main.sh`
+firebog=`${path}/lib/firebog.sh`
+gitburst=`${path}/lib/gitburst.sh`
+lonely=`${path}/lib/lonely.sh`
+oisd=`${path}/lib/oisd.sh`
 
 # Création Fichier initial
 if [ -d "$MAIN" ]; then
