@@ -23,10 +23,10 @@ dir_path=$(dirname $full_path)
 DIR='/tmp/bash-merge/'
 MAIN=`$dir_path/main-slyinc.txt`
 MAINSH=`$dir_path/main.sh`
-firebog=`$dir_path/Bash/lib/firebog.sh`
-gitburst=`$dir_path/Bash/lib/gitburst.sh`
-lonely=`$dir_path/Bash/lib/lonely.sh`
-oisd=`$dir_path/Bash/lib/oisd.sh`
+firebog=`$dir_path/lib/firebog.sh`
+gitburst=`$dir_path/lib/gitburst.sh`
+lonely=`$dir_path/lib/lonely.sh`
+oisd=`$dir_path/lib/oisd.sh`
 
 # Création Fichier initial
 if [ -d "$MAIN" ]; then
