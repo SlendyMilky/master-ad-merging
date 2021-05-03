@@ -21,6 +21,7 @@ adlist='lonely.adlist'
 rm -rf $DIR/*
 
 # Création Dossier DBL
+echo ""
 echo "Vérification existance dossier $DIR"
 if [ -d "$DIR" ]; then
   # Si $dir existe faire :
