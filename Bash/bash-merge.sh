@@ -21,10 +21,10 @@ path=`pwd`
 DIR='/tmp/bash-merge/'
 MAIN=`${path}/main-slyinc.txt`
 MAINSH=`${path}/main.sh`
-firebog=`${path}/lib/firebog.sh`
-gitburst=`${path}/lib/gitburst.sh`
-lonely=`${path}/lib/lonely.sh`
-oisd=`${path}/lib/oisd.sh`
+firebog=`${path}/Bash/lib/firebog.sh`
+gitburst=`${path}/Bash/lib/gitburst.sh`
+lonely=`${path}/Bash/lib/lonely.sh`
+oisd=`${path}/Bash/lib/oisd.sh`
 
 # Création Fichier initial
 if [ -d "$MAIN" ]; then
