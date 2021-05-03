@@ -29,16 +29,16 @@ lonely=`$dir_path/lib/lonely.sh`
 oisd=`$dir_path/lib/oisd.sh`
 
 # Création Fichier initial
-if [ -d "$MAIN" ]; then
+#if [ -d "$MAIN" ]; then
   # Si $main existe faire :
-  echo -e "${green}Le Fichier existe.${reset}"
-  echo -e "${yellow}Continuation du script.${reset}"
-else
-  # Si $main n'existe pas faire :
-  echo -e "${red}Le fichier n'existe pas !${reset}"
-  echo -e "${yellow}Création du fichier.${reset}"
-  $MAINSH
-fi
+#  echo -e "${green}Le Fichier existe.${reset}"
+#  echo -e "${yellow}Continuation du script.${reset}"
+#else
+#  # Si $main n'existe pas faire :
+#  echo -e "${red}Le fichier n'existe pas !${reset}"
+#  echo -e "${yellow}Création du fichier.${reset}"
+#  $MAINSH
+#fi
 
 # Nettoyage
 rm -rf $DIR/*
