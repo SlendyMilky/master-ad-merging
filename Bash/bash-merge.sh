@@ -21,8 +21,8 @@ dir_path=$(dirname $full_path)
 
 ## VAR à modif
 DIR='/tmp/bash-merge/'
-MAIN=`$dir_path/main-slyinc.txt`
 MAINSH=`$dir_path/main.sh`
+MAIN=`$dir_path/main-slyinc.txt`
 firebog=`$dir_path/lib/firebog.sh`
 gitburst=`$dir_path/lib/gitburst.sh`
 lonely=`$dir_path/lib/lonely.sh`
