@@ -15,7 +15,8 @@ green='\033[0;32m'
 red='\033[0;31m'
 yellow='\033[0;33m'
 reset='\033[0m'
-path=`pwd`
+path=`$(realpath $0)`
+
 
 ## VAR à modif
 DIR='/tmp/bash-merge/'
